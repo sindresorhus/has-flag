@@ -1,13 +1,11 @@
-'use strict';
-var test = require('ava');
-var fn = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(fn('unicorn', ['--foo', '--unicorn', '--bar']));
-	t.assert(fn('--unicorn', ['--foo', '--unicorn', '--bar']), 'optional prefix');
-	t.assert(fn('unicorn=rainbow', ['--foo', '--unicorn=rainbow', '--bar']));
-	t.assert(fn('unicorn', ['--unicorn', '--', '--foo']));
-	t.assert(!fn('unicorn', ['--foo', '--', '--unicorn']), 'don\'t match flags after terminator');
-	t.assert(!fn('unicorn', ['--foo']));
-	t.end();
+test(t => {
+	t.true(m('unicorn', ['--foo', '--unicorn', '--bar']));
+	t.true(m('--unicorn', ['--foo', '--unicorn', '--bar']), 'optional prefix');
+	t.true(m('unicorn=rainbow', ['--foo', '--unicorn=rainbow', '--bar']));
+	t.true(m('unicorn', ['--unicorn', '--', '--foo']));
+	t.false(m('unicorn', ['--foo', '--', '--unicorn']), 'don\'t match flags after terminator');
+	t.false(m('unicorn', ['--foo']));
 });
