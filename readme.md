@@ -16,7 +16,7 @@ $ npm install --save has-flag
 
 ```js
 // foo.js
-var hasFlag = require('has-flag');
+const hasFlag = require('has-flag');
 
 hasFlag('unicorn');
 //=> true
@@ -56,7 +56,7 @@ CLI flag to look for. The `--` prefix is optional.
 
 #### argv
 
-Type: `array`  
+Type: `array`<br>
 Default: `process.argv`
 
 CLI arguments.
@@ -64,4 +64,4 @@ CLI arguments.
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

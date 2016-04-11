@@ -18,7 +18,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -43,6 +43,7 @@
     "optimist"
   ],
   "devDependencies": {
-    "ava": "*"
+    "ava": "*",
+    "xo": "*"
   }
 }
