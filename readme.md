@@ -24,6 +24,9 @@ hasFlag('unicorn');
 hasFlag('--unicorn');
 //=> true
 
+hasFlag('-f');
+//=> true
+
 hasFlag('foo=bar');
 //=> true
 
@@ -35,7 +38,7 @@ hasFlag('rainbow');
 ```
 
 ```
-$ node foo.js --unicorn --foo=bar -- --rainbow
+$ node foo.js -f --unicorn --foo=bar -- --rainbow
 ```
 
 
