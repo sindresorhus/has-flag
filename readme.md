@@ -30,6 +30,12 @@ hasFlag('-f');
 hasFlag('foo=bar');
 //=> true
 
+hasFlag(['-f', 'unicorn']);
+//=> true
+
+hasFlag(['--unicorn', '--rainbow']);
+//=> false
+
 hasFlag('foo');
 //=> false
 
@@ -50,7 +56,7 @@ Returns a boolean whether the flag exists.
 
 #### flag
 
-Type: `string`
+Type: `string` or `array`
 
 CLI flag to look for. The `--` prefix is optional.
 
