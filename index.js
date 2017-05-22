@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function (flag, argv) {
-	argv = argv || process.argv;
+	argv = argv || process.argv || [];
 
 	var terminatorPos = argv.indexOf('--');
 	var prefix = /^-{1,2}/.test(flag) ? '' : '--';
