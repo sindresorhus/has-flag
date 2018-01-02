@@ -24,6 +24,9 @@ hasFlag('unicorn');
 hasFlag('--unicorn');
 //=> true
 
+hasFlag('f');
+//=> true
+
 hasFlag('-f');
 //=> true
 
@@ -46,7 +49,7 @@ $ node foo.js -f --unicorn --foo=bar -- --rainbow
 
 ### hasFlag(flag, [argv])
 
-Returns a boolean whether the flag exists.
+Returns a boolean for whether the flag exists.
 
 #### flag
 
