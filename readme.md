@@ -8,7 +8,7 @@ Correctly stops looking after an `--` argument terminator.
 ## Install
 
 ```
-$ npm install --save has-flag
+$ npm install has-flag
 ```
 
 
@@ -56,7 +56,7 @@ CLI flag to look for. The `--` prefix is optional.
 
 #### argv
 
-Type: `array`<br>
+Type: `string[]`<br>
 Default: `process.argv`
 
 CLI arguments.
