@@ -1,16 +1,16 @@
 import test from 'ava';
-import m from '.';
+import hasFlag from '.';
 
-test(t => {
-	t.true(m('unicorn', ['--foo', '--unicorn', '--bar']));
-	t.true(m('--unicorn', ['--foo', '--unicorn', '--bar']), 'optional prefix');
-	t.true(m('unicorn=rainbow', ['--foo', '--unicorn=rainbow', '--bar']));
-	t.true(m('unicorn', ['--unicorn', '--', '--foo']));
-	t.false(m('unicorn', ['--foo', '--', '--unicorn']), 'don\'t match flags after terminator');
-	t.false(m('unicorn', ['--foo']));
-	t.true(m('-u', ['-f', '-u', '-b']));
-	t.true(m('-u', ['-u', '--', '-f']));
-	t.true(m('u', ['-f', '-u', '-b']));
-	t.true(m('u', ['-u', '--', '-f']));
-	t.false(m('f', ['-u', '--', '-f']));
+test('main', t => {
+	t.true(hasFlag('unicorn', ['--foo', '--unicorn', '--bar']));
+	t.true(hasFlag('--unicorn', ['--foo', '--unicorn', '--bar']), 'optional prefix');
+	t.true(hasFlag('unicorn=rainbow', ['--foo', '--unicorn=rainbow', '--bar']));
+	t.true(hasFlag('unicorn', ['--unicorn', '--', '--foo']));
+	t.false(hasFlag('unicorn', ['--foo', '--', '--unicorn']), 'don\'t match flags after terminator');
+	t.false(hasFlag('unicorn', ['--foo']));
+	t.true(hasFlag('-u', ['-f', '-u', '-b']));
+	t.true(hasFlag('-u', ['-u', '--', '-f']));
+	t.true(hasFlag('u', ['-f', '-u', '-b']));
+	t.true(hasFlag('u', ['-u', '--', '-f']));
+	t.false(hasFlag('f', ['-u', '--', '-f']));
 });
