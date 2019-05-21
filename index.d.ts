@@ -34,6 +34,6 @@ hasFlag('rainbow');
 //=> false
 ```
 */
-declare function hasFlag(flag: string, argv?: string[]): boolean;
+declare function hasFlag(flag: string, argv?: readonly string[]): boolean;
 
 export = hasFlag;
