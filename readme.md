@@ -1,4 +1,4 @@
-# has-flag [![Build Status](https://travis-ci.org/sindresorhus/has-flag.svg?branch=master)](https://travis-ci.org/sindresorhus/has-flag)
+# has-flag
 
 > Check if [`argv`](https://nodejs.org/docs/latest/api/process.html#process_process_argv) has a specific flag
 
