@@ -1,5 +1,5 @@
 import test from 'ava';
-import hasFlag from '.';
+import hasFlag from './index.js';
 
 test('main', t => {
 	t.true(hasFlag('unicorn', ['--foo', '--unicorn', '--bar']));

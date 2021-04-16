@@ -2,21 +2,17 @@
 
 > Check if [`argv`](https://nodejs.org/docs/latest/api/process.html#process_process_argv) has a specific flag
 
-Correctly stops looking after an `--` argument terminator.
-
-
 ## Install
 
 ```
 $ npm install has-flag
 ```
 
-
 ## Usage
 
 ```js
 // foo.js
-const hasFlag = require('has-flag');
+import hasFlag from 'has-flag';
 
 hasFlag('unicorn');
 //=> true
@@ -44,12 +40,13 @@ hasFlag('rainbow');
 $ node foo.js -f --unicorn --foo=bar -- --rainbow
 ```
 
-
 ## API
 
 ### hasFlag(flag, argv?)
 
 Returns a boolean for whether the flag exists.
+
+It correctly stops looking after an `--` argument terminator.
 
 #### flag
 
@@ -59,11 +56,10 @@ CLI flag to look for. The `--` prefix is optional.
 
 #### argv
 
-Type: `string[]`<br>
+Type: `string[]`\
 Default: `process.argv`
 
 CLI arguments.
-
 
 ---
 
