@@ -1,3 +1,5 @@
+import process from 'process';
+
 export default function hasFlag(flag, argv = process.argv) {
 	const prefix = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
 	const position = argv.indexOf(prefix + flag);
