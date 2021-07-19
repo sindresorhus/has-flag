@@ -1,4 +1,4 @@
-import process from 'process';
+import process from 'process'; // eslint-disable-line node/prefer-global/process
 
 export default function hasFlag(flag, argv = process.argv) {
 	const prefix = flag.startsWith('-') ? '' : (flag.length === 1 ? '-' : '--');
